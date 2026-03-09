@@ -1,0 +1,94 @@
+# 中国域名 - 直连
+# CN Domains - Direct
+
+# 通用顶级域名
+DOMAIN-SUFFIX,cn
+DOMAIN-SUFFIX,com.cn
+DOMAIN-SUFFIX,net.cn
+DOMAIN-SUFFIX,org.cn
+DOMAIN-SUFFIX,gov.cn
+DOMAIN-SUFFIX,edu.cn
+DOMAIN-SUFFIX,mil.cn
+DOMAIN-SUFFIX,ac.cn
+
+# 搜索引擎
+DOMAIN-SUFFIX,baidu.com
+DOMAIN-SUFFIX,bdstatic.com
+DOMAIN-SUFFIX,bdimg.com
+DOMAIN-SUFFIX,baidubce.com
+DOMAIN-SUFFIX,sogou.com
+DOMAIN-SUFFIX,so.com
+DOMAIN-SUFFIX,soso.com
+
+# 社交与通信
+DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,weixin.qq.com
+DOMAIN-SUFFIX,weibo.com
+DOMAIN-SUFFIX,sina.com.cn
+DOMAIN-SUFFIX,sinaimg.cn
+
+# 电商
+DOMAIN-SUFFIX,taobao.com
+DOMAIN-SUFFIX,tmall.com
+DOMAIN-SUFFIX,alicdn.com
+DOMAIN-SUFFIX,jd.com
+DOMAIN-SUFFIX,jd.hk
+DOMAIN-SUFFIX,pinduoduo.com
+DOMAIN-SUFFIX,yangkeduo.com
+
+# 视频与娱乐
+DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,hdslb.com
+DOMAIN-SUFFIX,douyin.com
+DOMAIN-SUFFIX,ixigua.com
+DOMAIN-SUFFIX,kuaishou.com
+DOMAIN-SUFFIX,youku.com
+DOMAIN-SUFFIX,iqiyi.com
+
+# 知识与社区
+DOMAIN-SUFFIX,zhihu.com
+DOMAIN-SUFFIX,douban.com
+DOMAIN-SUFFIX,jianshu.com
+DOMAIN-SUFFIX,csdn.net
+DOMAIN-SUFFIX,toutiao.com
+
+# 生活服务
+DOMAIN-SUFFIX,meituan.com
+DOMAIN-SUFFIX,dianping.com
+DOMAIN-SUFFIX,ele.me
+DOMAIN-SUFFIX,ctrip.com
+DOMAIN-SUFFIX,xiaohongshu.com
+
+# 云服务与 CDN
+DOMAIN-SUFFIX,aliyuncs.com
+DOMAIN-SUFFIX,aliyun.com
+DOMAIN-SUFFIX,tencentcloudapi.com
+DOMAIN-SUFFIX,myqcloud.com
+DOMAIN-SUFFIX,qcloud.com
+DOMAIN-SUFFIX,tencent.com
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-SUFFIX,gtimg.cn
+DOMAIN-SUFFIX,idqqimg.com
+
+# 支付与金融
+DOMAIN-SUFFIX,alipay.com
+DOMAIN-SUFFIX,unionpay.com
+DOMAIN-SUFFIX,95516.com
+
+# 字节跳动
+DOMAIN-SUFFIX,bytedance.com
+DOMAIN-SUFFIX,pstatp.com
+DOMAIN-SUFFIX,snssdk.com
+
+# 网易
+DOMAIN-SUFFIX,163.com
+DOMAIN-SUFFIX,126.com
+DOMAIN-SUFFIX,netease.com
+DOMAIN-SUFFIX,yeah.net
+
+# 其他
+DOMAIN-SUFFIX,alibaba.com
+DOMAIN-SUFFIX,dingtalk.com
+DOMAIN-SUFFIX,feishu.cn

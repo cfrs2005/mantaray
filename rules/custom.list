@@ -1,0 +1,12 @@
+# 用户自定义规则
+# Custom Rules
+#
+# 在此添加个人规则，格式示例:
+#
+#   DOMAIN-SUFFIX,example.com
+#   DOMAIN,specific.example.com
+#   IP-CIDR,1.2.3.0/24,no-resolve
+#
+# 注意: 本文件在主配置中默认关联 DIRECT 策略
+# 如需代理某域名，请将其添加到 proxy_global.list 或 sensitive_services.list
+

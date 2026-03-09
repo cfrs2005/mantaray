@@ -1,0 +1,52 @@
+# 高风控服务 - 固定代理
+# Sensitive Services - Fixed Proxy Exit
+#
+# 这些服务对出口一致性极度敏感
+# 建议: 使用固定节点，避免自动切换
+
+# --- AI 平台 ---
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chat.openai.com
+DOMAIN-SUFFIX,api.openai.com
+DOMAIN-SUFFIX,auth0.openai.com
+DOMAIN-SUFFIX,platform.openai.com
+DOMAIN,cdn.oaistatic.com
+DOMAIN,oaidalleapiprodscus.blob.core.windows.net
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,midjourney.com
+DOMAIN-SUFFIX,suno.com
+
+# --- 开发者平台 ---
+DOMAIN-SUFFIX,vercel.com
+DOMAIN-SUFFIX,vercel.app
+DOMAIN-SUFFIX,netlify.com
+DOMAIN-SUFFIX,netlify.app
+DOMAIN-SUFFIX,railway.app
+DOMAIN-SUFFIX,fly.io
+DOMAIN-SUFFIX,render.com
+DOMAIN-SUFFIX,heroku.com
+DOMAIN-SUFFIX,supabase.com
+DOMAIN-SUFFIX,supabase.co
+DOMAIN-SUFFIX,planetscale.com
+DOMAIN-SUFFIX,neon.tech
+
+# --- 金融与支付 ---
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,wise.com
+DOMAIN-SUFFIX,revolut.com
+
+# --- SaaS 平台 ---
+DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,notion.site
+DOMAIN-SUFFIX,figma.com
+DOMAIN-SUFFIX,linear.app
+DOMAIN-SUFFIX,1password.com
+DOMAIN-SUFFIX,bitwarden.com
