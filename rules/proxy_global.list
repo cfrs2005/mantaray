@@ -1,20 +1,5 @@
 # 海外常见服务 - 代理
-# Global Services - Proxy
-
-# --- Google ---
-DOMAIN-SUFFIX,google.com
-DOMAIN-SUFFIX,google.co.jp
-DOMAIN-SUFFIX,google.co.kr
-DOMAIN-SUFFIX,google.com.hk
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,ggpht.com
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,gmail.com
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,youtu.be
+# 已移入 sensitive_services.list 的域名不在此重复
 
 # --- 社交媒体 ---
 DOMAIN-SUFFIX,twitter.com
@@ -37,11 +22,7 @@ DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,linkedin.com
 
-# --- 开发工具 ---
-DOMAIN-SUFFIX,github.com
-DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN-SUFFIX,github.io
-DOMAIN-SUFFIX,githubassets.com
+# --- 开发工具（非 sensitive 部分）---
 DOMAIN-SUFFIX,stackoverflow.com
 DOMAIN-SUFFIX,stackexchange.com
 DOMAIN-SUFFIX,npmjs.com

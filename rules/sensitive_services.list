@@ -1,29 +1,177 @@
 # 高风控服务 - 固定代理
-# Sensitive Services - Fixed Proxy Exit
-#
 # 这些服务对出口一致性极度敏感
-# 建议: 使用固定节点，避免自动切换
+# 建议: 固定节点，禁用自动切换
 
-# --- AI 平台 ---
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,chat.openai.com
-DOMAIN-SUFFIX,api.openai.com
-DOMAIN-SUFFIX,auth0.openai.com
-DOMAIN-SUFFIX,platform.openai.com
-DOMAIN,cdn.oaistatic.com
-DOMAIN,oaidalleapiprodscus.blob.core.windows.net
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai
+# ============================================================
+# Google 全家桶
+# ============================================================
+
+# --- Google 核心 ---
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,google.co.jp
+DOMAIN-SUFFIX,google.co.kr
+DOMAIN-SUFFIX,google.com.hk
+DOMAIN-SUFFIX,google.com.tw
+DOMAIN-SUFFIX,google.com.sg
+DOMAIN-SUFFIX,google.co.uk
+DOMAIN-SUFFIX,google.de
+DOMAIN-SUFFIX,google.fr
+DOMAIN-SUFFIX,google.ca
+
+# --- Google API / 基础设施 ---
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,googleapi.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,googleanalytics.com
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googleapps.com
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,googleoptimize.com
+DOMAIN-SUFFIX,googlesource.com
+DOMAIN-SUFFIX,googlezip.net
+DOMAIN-SUFFIX,googleplex.com
+
+# --- Google 顶级域 ---
+DOMAIN-SUFFIX,google
+DOMAIN-SUFFIX,goog
+DOMAIN-SUFFIX,g.co
+DOMAIN-SUFFIX,goo.gle
+DOMAIN-SUFFIX,google.dev
+DOMAIN-SUFFIX,google.cloud
+DOMAIN-SUFFIX,google.ai
+DOMAIN-SUFFIX,google.org
+DOMAIN-SUFFIX,blog.google
+DOMAIN-SUFFIX,withgoogle.com
+DOMAIN-SUFFIX,googleblog.com
+DOMAIN-SUFFIX,googlecloud.com
+
+# --- Google Cloud / Firebase ---
+DOMAIN-SUFFIX,run.app
+DOMAIN-SUFFIX,appspot.com
+DOMAIN-SUFFIX,web.app
+DOMAIN-SUFFIX,firebaseio.com
+DOMAIN-SUFFIX,firebaseapp.com
+DOMAIN-SUFFIX,firebase.google.com
+DOMAIN-SUFFIX,cloudfunctions.net
+DOMAIN-SUFFIX,cloudrun.dev
+
+# --- Google AI / Gemini ---
+DOMAIN-SUFFIX,ai.google
+DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,aistudio.google.com
-DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,labs.google
+DOMAIN-SUFFIX,labs.google.com
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,antigravity.google
+DOMAIN,antigravity-unleash.goog
+
+# --- Google 账号 / 登录 ---
+DOMAIN-SUFFIX,accounts.google.com
+DOMAIN-SUFFIX,myaccount.google.com
+DOMAIN-SUFFIX,oauth2.googleapis.com
+DOMAIN-SUFFIX,securetoken.googleapis.com
+
+# --- YouTube ---
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,yt.be
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,youtubei.googleapis.com
+DOMAIN-SUFFIX,youtube-ui.l.google.com
+DOMAIN-SUFFIX,youtubeembedded-pa.googleapis.com
+
+# --- Google 其他 ---
+DOMAIN-SUFFIX,gmail.com
+DOMAIN-SUFFIX,chrome.com
+DOMAIN-SUFFIX,chromium.org
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,v8.dev
+DOMAIN-SUFFIX,tensorflow.org
+DOMAIN-SUFFIX,kaggle.com
+DOMAIN-SUFFIX,colab.research.google.com
+DOMAIN-SUFFIX,android.com
+DOMAIN-SUFFIX,material.io
+DOMAIN-SUFFIX,dart.dev
+DOMAIN-SUFFIX,flutter.dev
+DOMAIN-SUFFIX,golang.org
+DOMAIN-SUFFIX,go.dev
+
+# ============================================================
+# AI 大模型平台
+# ============================================================
+
+# --- OpenAI / ChatGPT / Sora ---
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,openaicom-api-bdcpf8c6d2e9b1e5.z01.azurefd.net
+DOMAIN,oaidalleapiprodscus.blob.core.windows.net
+DOMAIN-SUFFIX,sora.com
+
+# --- Anthropic / Claude ---
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claudeusercontent.com
+
+# --- xAI / Grok ---
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,grok.x.ai
+
+# --- 其他 AI 平台 ---
 DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,groq.com
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,suno.com
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,replicate.com
+DOMAIN-SUFFIX,together.ai
+DOMAIN-SUFFIX,together.xyz
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,cohere.ai
+DOMAIN-SUFFIX,stability.ai
+DOMAIN-SUFFIX,runway.ml
+DOMAIN-SUFFIX,runwayml.com
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,codeium.com
+DOMAIN-SUFFIX,tabnine.com
+DOMAIN-SUFFIX,phind.com
+DOMAIN-SUFFIX,you.com
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,llama.com
 
-# --- 开发者平台 ---
+# ============================================================
+# 开发者平台
+# ============================================================
+
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,copilot.github.com
+DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,vercel.com
 DOMAIN-SUFFIX,vercel.app
 DOMAIN-SUFFIX,netlify.com
@@ -36,14 +184,22 @@ DOMAIN-SUFFIX,supabase.com
 DOMAIN-SUFFIX,supabase.co
 DOMAIN-SUFFIX,planetscale.com
 DOMAIN-SUFFIX,neon.tech
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,workers.dev
 
-# --- 金融与支付 ---
+# ============================================================
+# 金融与支付
+# ============================================================
+
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,wise.com
 DOMAIN-SUFFIX,revolut.com
 
-# --- SaaS 平台 ---
+# ============================================================
+# SaaS
+# ============================================================
+
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,notion.site
 DOMAIN-SUFFIX,figma.com
