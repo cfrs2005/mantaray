@@ -2,6 +2,17 @@
 
 出口异常时，按以下顺序排查。
 
+## 第零步：跑门禁
+
+先排除配置本身写错的可能 —— 大部分「规则没生效」是静默失效，不是玄学：
+
+```bash
+python3 scripts/verify.py          # 静态断言
+python3 scripts/verify.py --live   # 追加 RULE-SET 可达性 + 实测解析
+```
+
+有 FAIL 先修 FAIL。WARN 是「出口不确定」，不一定是错，但值得看一眼。
+
 ## 第一步：确认当前模式
 
 - 确认使用的是 **配置模式**，不是场景模式
@@ -21,6 +32,13 @@
 
 - 某海外域名被国内 DNS 解析到国内 CDN IP → GeoIP 判为 CN → 走了直连
 - 解决：将该域名加入 `proxy_global.list` 或 `sensitive_services.list`（域名规则优先于 GeoIP）
+
+更隐蔽的一类：**出口和解析源脱耦**。域名走 DIRECT 但被海外 DNS 解析，
+或走 PROXY 却被本地 DNS 解析。这类问题靠 `nslookup` 看不出来，要看
+`[Host]` 绑定和 `[Rule]` 出口是否配对 —— 见 [DNS 出口绑定](dns-pinning.md)。
+
+`[Host]` 段有三个静默失效的坑（域名后多空格 / 通配不匹配裸域 / 顺序被抢先），
+`verify.py` 全都有断言。
 
 验证方法：
 ```bash
@@ -61,6 +79,9 @@ dig example.com
 | 速度突然变慢 | 节点负载；DNS 解析延迟；是否切换了网络环境 |
 | 某服务触发风控 | 检查出口 IP 是否变化；是否用了自动选择节点；参考[风控指南](risk-control-guidelines.md) |
 | 规则好像没生效 | 确认是配置模式；确认 RULE-SET URL 可达；重新加载配置 |
+| `[Host]` 改了没反应 | 域名和 `=` 之间有空格；被前面的通配抢先；跑 `verify.py` |
+| 内网域名连不上 | 公网 DNS 是否还返回内网 IP；考虑上静态 Host（L0）|
+| 更新配置后绑定丢了 | 改了 `configs/*.conf` 而不是 `dns/pinning.conf`，被 sync 覆盖 |
 
 ## 调试模式
 
