@@ -56,27 +56,20 @@ L0 默认关闭。静态 IP 最硬也最脆，对端换 IP 就断。
 
 三条 `scripts/verify.py` 都有断言守着，不要靠记。
 
-## 案例：gs-robot.com
+## 案例：同一顶级域的出口分裂
 
-高仙做了全球服务，但**不是 GeoDNS**。实测 2026-08-27，doh.pub / cloudflare-dns / dns.google
-三个解析源结果完全一致：
+有些服务用独立子域区分国内和海外区域，而不是用 GeoDNS。此时一条顶级域通配规则兜不住。
+例如，假设 `service.example.com` 需要直连，而 `eu.service.example.com` 和
+`us.service.example.com` 需要代理：
 
-| 域名 | A 记录 | 归属 | 正确出口 |
-|------|--------|------|----------|
-| `bot-eu.gs-robot.com` | 4.178.207.121 | FR Paris / Azure | PROXY |
-| `bot-us.gs-robot.com` | 4.242.118.46 | US / Azure | PROXY |
-| `gs-robot.com` | 203.107.60.192 | CN 上海 / 阿里云 | DIRECT |
-| `api.gs-robot.com` | 47.117.78.85 | CN 上海 / 阿里云 | DIRECT |
-| `www.gs-robot.com` | 139.196.100.202 | CN 上海 / 阿里云 | DIRECT |
-| `portal` / `bot` / `bot-sg` | 47.100.244.151 | CN 上海 / 阿里云 | DIRECT |
+```text
+DOMAIN-SUFFIX,eu.service.example.com,PROXY
+DOMAIN-SUFFIX,us.service.example.com,PROXY
+DOMAIN-SUFFIX,service.example.com,DIRECT
+```
 
-区域化是靠**独立子域**实现的，不是靠解析源。所以：
-
-- 一条 `DOMAIN-SUFFIX,gs-robot.com,DIRECT` 兜不住 —— 会把 Azure 欧洲/美国的节点也拖去直连
-- 海外区域子域必须**先于**通配写出来
-- 只有 DIRECT 的那部分需要 `server:` 绑定；`bot-eu` / `bot-us` 故意不出现在 `[Host]` 里
-
-对应实现见 `dns/pinning.conf`。
+更具体的海外子域必须写在通配规则前面。只有 DIRECT 的域名需要写进 `[Host]`；
+PROXY 域名不做本地 DNS 绑定，交给代理落地节点解析。
 
 ## 豁免
 

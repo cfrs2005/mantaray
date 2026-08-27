@@ -16,9 +16,8 @@
 
 ### Fixed
 - 4 个 conf 的 `skip-proxy` 含非法 token `e.]`，换成 `127.0.0.1` + `captive.apple.com`
-- `gs-robot.com` 全球服务出口分裂：实测确认区域化靠独立子域而非 GeoDNS，
-  补上漏掉的 `bot-us.gs-robot.com`（US/Azure），与 `bot-eu` 一并置于通配之前
-- `gs-robot.com` DIRECT 规则重复声明
+- 修正同一顶级域下区域子域出口分裂时的规则顺序
+- 清理重复的 DIRECT 规则
 - `[Host]` 中一条通配绑定的域名后多打了一个空格，整条静默失效
 - 实测清理 7 条死绑定：6 个域名无 A 记录，1 个已过期落到域名停放页
 
