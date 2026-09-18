@@ -1,0 +1,26 @@
+# --- 钉钉优先直连（Mac TUN）---
+
+PROCESS-NAME,DingTalk
+PROCESS-NAME,钉钉
+PROCESS-NAME,AliDingTalk
+PROCESS-NAME,com.alibaba.DingTalkMac
+
+DOMAIN-SUFFIX,dingtalk.com
+DOMAIN-SUFFIX,dingtalk.com.cn
+DOMAIN-SUFFIX,dingtalk.cn
+DOMAIN-SUFFIX,dingtalk.net
+DOMAIN-SUFFIX,dingtalkapps.com
+DOMAIN-SUFFIX,dg-work.cn
+DOMAIN-SUFFIX,dingding.xin
+DOMAIN-SUFFIX,laiwang.com
+DOMAIN-SUFFIX,ddurl.to
+DOMAIN-SUFFIX,lwurl.to
+DOMAIN-SUFFIX,realapp.xin
+
+DOMAIN-KEYWORD,dingtalk
+DOMAIN-KEYWORD,dingding
+
+# 钉钉会打到阿里云 CDN / OSS，漏了一样会绕 TUN
+DOMAIN-SUFFIX,alicdn.com
+DOMAIN-SUFFIX,aliyuncs.com
+DOMAIN-SUFFIX,aliyun.com
