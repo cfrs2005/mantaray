@@ -1,5 +1,4 @@
-# --- 钉钉优先直连（Mac TUN）---
-
+# 钉钉直连（RULE-SET 引用时必须 DIRECT）
 PROCESS-NAME,DingTalk
 PROCESS-NAME,钉钉
 PROCESS-NAME,AliDingTalk
@@ -18,9 +17,3 @@ DOMAIN-SUFFIX,lwurl.to
 DOMAIN-SUFFIX,realapp.xin
 
 DOMAIN-KEYWORD,dingtalk
-DOMAIN-KEYWORD,dingding
-
-# 钉钉会打到阿里云 CDN / OSS，漏了一样会绕 TUN
-DOMAIN-SUFFIX,alicdn.com
-DOMAIN-SUFFIX,aliyuncs.com
-DOMAIN-SUFFIX,aliyun.com
