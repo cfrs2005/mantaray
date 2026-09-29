@@ -1,0 +1,31 @@
+# 交易所与综合平台
+DOMAIN-SUFFIX,binance.com
+DOMAIN-SUFFIX,binance.charity
+DOMAIN-SUFFIX,binance.cloud
+DOMAIN-SUFFIX,binance.co
+DOMAIN-SUFFIX,binance.me
+DOMAIN-SUFFIX,bnappzh.com
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,coinbase.com
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,gate.io
+DOMAIN-SUFFIX,kucoin.com
+DOMAIN-SUFFIX,bitget.com
+DOMAIN-SUFFIX,htx.com
+DOMAIN-SUFFIX,huobi.com
+DOMAIN-SUFFIX,mexc.com
+DOMAIN-SUFFIX,kraken.com
+
+# 加密货币行情、钱包与资讯工具
+DOMAIN-SUFFIX,coinmarketcap.com
+DOMAIN-SUFFIX,coingecko.com
+DOMAIN-SUFFIX,tradingview.com
+DOMAIN-SUFFIX,etherscan.io
+DOMAIN-SUFFIX,bscscan.com
+DOMAIN-SUFFIX,solscan.io
+DOMAIN-SUFFIX,tronscan.org
+DOMAIN-SUFFIX,metamask.io
+DOMAIN-SUFFIX,phantom.app
+DOMAIN-SUFFIX,trustwallet.com
+DOMAIN-SUFFIX,uniswap.org
